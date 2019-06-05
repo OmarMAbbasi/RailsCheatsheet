@@ -1,6 +1,6 @@
 1. rails new my_project_name -G --database=postgresql
 2. rails db:create #creates database 
-3. rails db:setup ##runs rails db:create, rails db:migrate then rails db:see
+3. rails db:setup ##runs rails db:create, rails db:migrate then rails db:seed
 ##make sure your postgresql server is running
 
 rails c ## Rails Console. Use pry-rails gem
