@@ -4,7 +4,7 @@
 
 class CreateMigrations < ActiveRecord::Migration[5.2]
   def change
-    create_table :likes do |t|
+    create_table :migrations do |t|
       t.integer :foreign_key, null: false  ##Foreign Key
       t.string :string ####256 chars. Username, Password, etc
       t.text :paragraph ####Lots of Chars. Comments, Posts, etc. Anything in a textbox
@@ -13,7 +13,7 @@ class CreateMigrations < ActiveRecord::Migration[5.2]
       
       t.timestamps ##Should always be here. 
     end
-    add_index :likes, :foreign_key, unique: true, null: false ###Foregn Key indexing 
+    add_index :migrations, :foreign_key, unique: true, null: false ###Foregn Key indexing 
                                 ## unique/null schema validations.
      
   end
