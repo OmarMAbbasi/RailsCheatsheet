@@ -1,0 +1,12 @@
+1. rails new my_project_name -G --database=postgresql
+2. rails db:create #creates database 
+3. rails db:setup ##runs rails db:create, rails db:migrate then rails db:see
+##make sure your postgresql server is running
+
+rails c ## Rails Console. Use pry-rails gem
+rails s ## activates active server for localhost & postman testing
+
+
+other commands #unlikely to be useful for assessment but good to know
+rails db:drop will drop the entire database off the server 
+rails db:purge will keep the database loaded but it will be fresh & need to be re-migrated/seeded.

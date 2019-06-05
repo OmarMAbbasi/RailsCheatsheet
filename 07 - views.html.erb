@@ -1,0 +1,73 @@
+        <!--    Prefix Verb   URI Pattern                                                                       Controller#Action
+    controllers GET    /controllers(.:format)                                                                   controllers#index
+                POST   /controllers(.:format)                                                                   controllers#create
+ new_controller GET    /controllers/new(.:format)                                                               controllers#new
+edit_controller GET    /controllers/:id/edit(.:format)                                                          controllers#edit
+     controller GET    /controllers/:id(.:format)                                                               controllers#show
+                PATCH  /controllers/:id(.:format)                                                               controllers#update
+                PUT    /controllers/:id(.:format)                                                               controllers#update
+                DELETE /controllers/:id(.:format)                                                               controllers#destroy -->
+
+
+<!-- Evaluates and Returns ruby code -->
+<%=  %>
+<!-- Just Evaluates Ruby Code without returning -->
+<% if/while %>
+
+<% end %>
+<!-- Need to close with end when opening loops & conditionals  -->
+
+
+<!-- Link to controllers#index. Plural -->
+<a href="<%=controllers_url %>">Here is the Index</a> 
+
+
+<!-- Link to controller#show for a specific instance -->
+<a href="<%=controller_url[@controller] %>">Here is a specific instance with :id</a>
+
+
+<!-- Creating a Form for Create/Update -->
+<form id = 'form name' action="<%= controller_url(@controller) %>" method="post">
+        <!-- ^can be whatever. Useful for tagging form for things like textarea and whatnot -->
+
+<!-- If method is NOT 'post' (ie delete/update) put this below the form action -->
+<input type="hidden" name="_method" value="delete">
+
+
+<!-- Submit button will call :create/:update in controller -->
+<input type="submit" value="Button text here">
+
+
+<!-- Link to the controller#new form -->
+<a href="<%=new_controller%>">Make a new Instance</a>
+
+
+<!-- Link to the controller#edit form -->
+<a href="<%=edit_controller_url %>">Give us more info</a>
+
+<!-- Accepting user input -->
+<input type="text" name="user[age]" value="<%= user.age %>" />
+
+
+<!-- Using Partials (Not needed for assessment)--> 
+
+<!-- in original erb -->
+<%= render 'controller_partial', controller: @controller, type: :action %>
+<!-- action ==> :new, :edit, :show, destroy, :index -->
+<!--  'controller_partial' ==> '_controller_partial.html.erb -->
+
+<!-- Can call type & controller in controller_partial. 
+    type ==> :action Use whatever naming convention you want.
+    useful for if/else clauses. 
+
+    controller ==> same params as @controller but encapsulated. 
+    do not need to call @controller in partial.
+
+-->
+
+
+
+
+
+
+

@@ -1,0 +1,16 @@
+rails g migration <name> # Generates migration based on name. Use to update table
+
+rails g model <name> ##Generates a Model along with a migration. Use this when creating a new model
+
+rails g controller ##Generates an empty controller and a folder for your views. 
+
+
+--- Advanced Commands ---
+
+rails g scaffold ##Generates migration, model, controller, and views for the class you give it. Will error out if you try to do this on an existing model
+        WARNING: There's a lot of advanced/junk code that comes with this that isn't super relevant to the assessment. 
+        This just fleshes out some pretty basic stuff. I wouldn't experiment this much unless you're already comfortable with rails.
+
+rails g scaffold_controller ## Does the same as above but will not error out when building ontop of an existing Model like the above will. 
+
+replace g with d to destroy everything with that name 

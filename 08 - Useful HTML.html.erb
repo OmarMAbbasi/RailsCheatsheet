@@ -1,0 +1,77 @@
+<!-- Displaying Information -->
+
+<!-- Table  -->
+
+<table border: (color)> <!--opens table -->
+    <thead> <!--table header -->
+        <tr colspan=#> <!-- colspan optional. Makes row wider -->
+            <th>
+                <!--table name/header text -->
+            </th>
+        </tr> <!-- table rows. WIll take col_span to have longer table -->
+    </thead>
+
+    <tbody> <!-- actual body of table -->
+        <td><%=@controller.param 1%></td>
+        <td><%=@controller.param 2%></td>
+        <td><%=@controller.param 3%></td>
+    </tbody>
+</table>
+
+<!-- List -->
+<ul>
+    <%controllers.each do |controller| %>
+    <li>
+        <ul>
+            <li><%=controller.param_1%></li>
+            <li><%=controller.param_2%></li>
+            <li><%=controller.param_3%></li>
+            <li><a href="<%=controller_url(controller) %>">To Index </a></li>
+            <!-- optional link to index -->
+        </ul>
+    </li>
+    <%end%>
+</ul>
+
+
+
+
+
+<!-- Forms for Create/Destroy -->
+
+<!-- Radio -->
+<input type="radio" name='controller[param]' value='radio_value' checked>
+<!-- name must match controller[parameter] convention checked/unchecked optional. -->
+
+
+
+
+<!-- Dropdown -->
+
+<select name='controller[param]'>
+    <option value="<%= controller.dropdown_value %>"> <%= controller.dropdown_value %></option>
+    <!-- ^tells rails what to edit in DB        ^tells rails what the HTML display will be -->
+
+    <option value="">---------</option> <!-- Default in dropdown -->
+
+    <!-- Loops through Collection to create dropdown -->
+    <% Controller.get_collection.each do |dropdown_value|%>
+        <option value="<%= dropdown_value %>"><%= dropdown_value %></option>
+    <% end%>
+</select>
+<!-- Textbox -->
+<input type="text" name='controller[param]' value='<%=controller.param%>'>
+
+
+<!-- Textarea -->
+<textarea name="controller[param]" form='<%=form_id%>'>
+    <%= controller.param%></textarea>
+
+
+<!-- Date ##require 'date' quadruple check with Ryan if info outdated-->
+<input type="date" name='controller[date]' value='<%= controller.date %>'>
+
+
+
+<!-- Submit button will call :create/:update in controller -->
+<input type="submit" value="Button text here">

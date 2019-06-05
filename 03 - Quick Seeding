@@ -1,0 +1,53 @@
+- Faker Gem is great for seeding. ## https://github.com/stympy/faker#generators
+  Faker::XXXXXX.unique.method will give you unique values for the seed
+
+Some Useful Ones
+
+Faker::Name  ==> https://github.com/stympy/faker/blob/master/doc/unreleased/default/name.md
+======================================================
+Faker::Name.name             #=> "Tyshawn Johns Sr."
+
+Faker::Name.first_name       #=> "Kaci"
+
+Faker::Name.male_first_name   #=> "Edward"
+
+Faker::Name.female_first_name #=> "Natasha"
+
+Faker::Name.last_name        #=> "Ernser"
+
+=========================================================================
+
+Faker::Internet ==> https://github.com/stympy/faker/blob/master/doc/unreleased/default/internet.md
+
+=========================================================================
+Faker::Internet.email #=> "eliza@mann.net"
+
+Faker::Internet.email('Nancy') #=> "nancy@terry.biz"
+
+Faker::Internet.email('Janelle Santiago', '+') #=> janelle+santiago@becker.com"
+
+Faker::Internet.username #=> "alexie"
+
+# Optional arguments: min_length=8, max_length=16
+Faker::Internet.password #=> "Vg5mSvY1UeRg7
+
+=========================================================================
+Faker::Lorem ==> https://github.com/stympy/faker/blob/master/doc/unreleased/default/lorem.md
+
+=========================================================================
+###These will take Faker::Lorem.method(integer) to generate a specific number
+Faker::Lorem.word #=> "repellendus"
+
+Faker::Lorem.words #=> ["dolores", "adipisci", "nesciunt"]
+
+Faker::Lorem.characters #=> "uw1ep04lhs0c4d931n1jmrspprf5wrj85fefue0y7y6m56b6omquh7br7dhqijwlawejpl765nb1716idmp3xnfo85v349pzy2o9rir23y2qhflwr71c1585fnynguiphkjm8p0vktwitcsm16lny7jzp9t4drwav3qmhz4yjq4k04x14gl6p148hulyqioo72tf8nwrxxcclfypz2lc58lsibgfe5w5p0xv95peafjjmm2frkhdc6duoky0aha"
+
+Faker::Lorem.sentence #=> "Quia illum libero magni."
+
+Faker::Lorem.sentences #=> ["Vero earum commodi soluta.", "Quaerat fuga cumque et vero eveniet omnis ut.", "Cumque sit dolor ut est consequuntur."]
+
+Faker::Lorem.paragraph #=> (Long ass paragraph)
+
+
+
+
