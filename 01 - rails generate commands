@@ -13,4 +13,4 @@ rails g scaffold ##Generates migration, model, controller, and views for the cla
 
 rails g scaffold_controller ## Does the same as above but will not error out when building ontop of an existing Model like the above will. 
 
-replace g with d to destroy everything with that name 
+replace g with d to destroy everything with that name. Best not to do this probably unless you had a typo in your generate.
